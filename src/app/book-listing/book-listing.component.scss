@@ -1,0 +1,76 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+.content > mat-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 180px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+.addBookContent {
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 50%;
+    background-color: #D9AA62;    
+}
+
+.contentSearch {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 100%;
+
+}
+.contentSearch > input {
+    margin-left: 30%;
+    width: 33%;
+    border:none;
+    outline:none;
+    border-radius:22px;
+    padding-left: 20px;
+}
+
+.icone{
+    width: 25px;
+}
+
+#condition {
+    align-self: flex-end;
+}
+
+.bookImg {
+    height:120px;
+    width: 70px;
+    margin-bottom: 10px;
+    align-self: center;    
+}
+
+.text {
+    font-family: Garamond;
+    color: #33221a;
+}
+
+.matAutocomplete {
+    background-color: #F1E4CF;
+}
+
+.matAutocomplete:hover {
+    color:#F1E4CF;
+    background-color:#33221A;
+}

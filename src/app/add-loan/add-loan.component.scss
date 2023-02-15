@@ -1,0 +1,115 @@
+
+.pannel {
+    background-color: #D9AA62;
+}
+
+.content-search > input {
+    margin-left: 30%;
+    margin-right: 20px;
+    height: 40px;
+    color:#33221A;
+    border: 2px solid #33221A;
+    width: 33%;
+    border:none;
+    outline:none;
+    border-radius:22px;
+    padding-left: 20px;
+    background-color: #F1E4CF;
+}
+
+.search {
+    height: 30px;
+}
+
+.autocomplete{
+    background-color: #F1E4CF;
+}
+
+.option {
+    background-color: #F1E4CF;
+    color:#33221A;
+}
+
+.option:hover {
+    color:#F1E4CF;
+    background-color:#33221A;
+}
+
+.book-item-card{
+    margin-top: 20px;
+    color:#33221A;
+    background-color:#F1E4CF;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 180px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+.text {
+        font-family: Garamond;
+        color: #33221A;
+}
+
+.book-img {
+    height:120px;
+    width: 70px;
+    margin-bottom: 10px;
+    align-self: center;    
+}
+
+.content-search > img {
+    height: 50px;
+}
+
+.button {
+    margin: 20px;
+    border-radius:22px;
+    border: 2px solid #33221A;
+    color: #33221A; 
+   font-family: Garamond;
+
+}
+
+.button:hover{
+    margin: 20px;
+    border-radius:22px;
+    color:#F1E4CF;
+    background-color:#33221A;
+}
+
+#enregistrer {
+    float:right;
+}
+
+.date-content {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.date-content > input {
+    margin-left: 30%;
+    margin-right: 20px;
+    height: 40px;
+    color:#33221A;
+    border: 2px solid #33221A;
+    width: 20%;
+    border:none;
+    outline:none;
+    border-radius:22px;
+    padding-left: 20px;
+    background-color: #F1E4CF;
+}
+
+mat-datepicker-toggle {
+    color: #33221A !important;
+}
+
+mat-picker {
+    background-color: red;;
+}

@@ -1,0 +1,63 @@
+.content {
+    margin-bottom: 15px;
+
+}
+
+.content > mat-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    width: 32%;
+}
+
+.item > img {
+    height: 60px;
+    align-self: center;
+    margin-left: 25px;
+    margin-right: 5px;
+}
+
+.item > p, h2 {
+    align-self: center;
+    margin-left: 25px;
+    margin-right: 5px;
+    font-family: Garamond;
+    width: max-content;
+    min-width: 300px;
+    color: #33221a;}
+
+.contentAddLoan {
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.divider {
+    margin-top: 5px;
+    height: 70px;
+    border-left: 2px solid #33221a;
+}
+
+.add-loan-content {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color:  #D9AA62;;
+}
+
+.text {
+    font-family: Garamond;
+    color: #33221A;
+}
+
+.icone{
+    width: 25px;
+}

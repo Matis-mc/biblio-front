@@ -1,0 +1,24 @@
+.content {
+    background-color:#f9f3ee;
+    margin: 2.5%;
+
+    padding : 1%;
+
+    border-radius: 25px;
+    
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+
+    overflow: scroll;
+}
+
+
+
+.content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+

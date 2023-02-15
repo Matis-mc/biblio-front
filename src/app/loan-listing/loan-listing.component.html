@@ -1,0 +1,30 @@
+<button mat-button (click)="setLoans()"><img class="icone" src="../assets/refresh.png" alt="Rafraichir"></button>
+<div *ngIf="display == 'LOANS'" class="content">
+            <mat-card *ngFor="let loan of loan$ | async">
+                <div class="item">
+                    <img src="../assets/book-item.jpg">
+                    <h2>{{loan.titleBook}}</h2>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <img src="../assets/man.png">
+                    <h2 class="item">{{loan.nameUser}}</h2>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <h2 class="item">{{loan.dateOfBorrow}}</h2>
+                </div>
+            </mat-card>
+
+    <mat-accordion >
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false" class="add-loan-content">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="text">
+                Ajouter un nouveau prêt
+                </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-add-loan></app-add-loan>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

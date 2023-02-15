@@ -1,0 +1,50 @@
+<mat-expansion-panel class="pannel">
+    <mat-expansion-panel-header>
+      <mat-panel-title content="pannel" class="text"> Choisir un livre </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="content-search">
+        <input type="text"
+                placeholder="Titre du livre"
+                matInput
+                [formControl] = "titleSelectControl"
+                [matAutocomplete] = "title">
+        <button mat-button (click)="getBookFromResearch()"><img src="../assets/loupe.png" class="search" ></button>
+        <mat-card *ngFor="let book of book$ | async" class="book-item-card" (click)="setBookSelected(book)">
+                <img class="book-img" src="../assets/book-item.png" >
+                <mat-card-title class="text">{{book.title}}</mat-card-title>
+                <mat-card-content>
+                    <h3 *ngIf="book.author" class="text">{{book.author}}</h3>
+                    <p *ngIf="book.year" class="text">{{book.year}}</p>
+                    <p class="text">Etat : {{book.condition}}</p>
+                </mat-card-content>
+        </mat-card>
+    </div>
+
+    <mat-autocomplete #title="matAutocomplete" class="autocomplete">
+        <mat-option *ngFor="let title of filteredTitle$ | async" [value]="title" class="option">
+            {{title}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-expansion-panel>
+
+<mat-expansion-panel class="pannel" >
+    <mat-expansion-panel-header>
+      <mat-panel-title class="text">Ajouter un nouveau livre </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-add-book></app-add-book>
+</mat-expansion-panel>
+
+<mat-expansion-panel class="pannel" >
+    <mat-expansion-panel-header>
+      <mat-panel-title class="text">Sélectionner la date d'emprunt</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="date-content">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="dateOfBorrow">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker color="primary" #picker></mat-datepicker>
+    </div>
+</mat-expansion-panel>
+
+<button mat-button (click)="saveLoan()" id="enregistrer" class="button">Enregistrer le prêt</button>
+<button mat-button class="button">Annuler</button>
+

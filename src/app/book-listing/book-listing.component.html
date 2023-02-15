@@ -1,0 +1,42 @@
+<div *ngIf="display == 'BOOKS'">
+    <div class="contentSearch">
+        <button mat-button (click)="getAllBooks()"><img class="icone" src="../assets/refresh.png" alt="Rafraichir"></button>
+        <input type="text"
+                placeholder="Titre du livre"
+                matInput
+                [formControl] = "titleSelectControl"
+                [matAutocomplete] = "title">
+        <button mat-button (click)="getBookFromResearch()"><img class="icone" src="../assets/loupe.png" alt="Rechercher"></button>
+    </div>
+
+    <mat-autocomplete #title="matAutocomplete" class="matAutocomplete">
+        <mat-option  class="matAutocomplete" *ngFor="let title of filteredTitle$ | async" [value]="title">
+            {{title}}
+        </mat-option>
+    </mat-autocomplete>
+
+    <div class="content" >
+                <mat-card *ngFor="let book of book$ | async" class="mat-elevation-z4" matTooltip={{bookAction}}>
+                    <img class="bookImg" src="../assets/book-item.png" >
+                    <mat-card-title class="text">{{book.title}}</mat-card-title>
+                    <mat-card-content>
+                        <h3 *ngIf="book.author" class="text">{{book.author}}</h3>
+                        <p *ngIf="book.year" class="text">{{book.year}}</p>
+                        <p class="text">Etat : {{book.condition}}</p>
+                    </mat-card-content>
+                </mat-card>
+    </div>
+
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false"
+                            class="addBookContent">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="text">
+                    Ajouter un nouveau livre
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-add-book></app-add-book>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

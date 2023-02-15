@@ -1,0 +1,10 @@
+<mat-tab-group class="tabs" mat-align-tabs="center" (selectedTabChange)="onSelectedTabChange($event)">
+    <mat-tab class="tab" label="LIVRES"></mat-tab>
+    <mat-tab class="tab" label="EMPRUNTS"></mat-tab>
+    <mat-tab class="tab" label="ELEVES"></mat-tab>
+</mat-tab-group>
+<div class="content">
+    <app-book-listing [type]="type" [display]="display"></app-book-listing>
+    <app-loan-listing [type]="type" [display]="display"></app-loan-listing>
+    <app-user-listing [display]="display"></app-user-listing>
+</div>

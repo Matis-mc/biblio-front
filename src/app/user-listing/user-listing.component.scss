@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 15px;
+    justify-content: space-between;
+
+}
+
+.content > mat-card {
+    margin: 10px;
+    width: 180px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.userImg {
+    height:150px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-top: 30px;
+    align-self:center;    
+}
+
+.text {
+    font-family: Garamond;
+    color: #33221a;
+    align-self: center;    
+
+}

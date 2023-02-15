@@ -1,0 +1,12 @@
+.tabs {
+    width: 50%;
+    margin: auto;
+}
+
+.tab{
+    text-align: center;
+
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: #30211A !important;
+}

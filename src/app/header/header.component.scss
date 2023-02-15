@@ -1,0 +1,18 @@
+#headerContent {
+    display:grid
+}
+
+#logo {
+    grid-area: auto;
+    margin:1%;
+}
+
+.icone{
+    width: 30px;
+}
+
+#logoutBtn {
+    position: relative;
+    float: right;
+    margin:1%;   
+}

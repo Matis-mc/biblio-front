@@ -1,0 +1,28 @@
+<div class="content">
+        <input type="text"
+        placeholder="Titre"
+        matInput
+        [(ngModel)] = "title">
+
+        <input type="text"
+        placeholder="Auteur"
+        matInput
+        [(ngModel)] = "author">
+
+        <input type="text"
+        placeholder="Année"
+        matInput
+        [(ngModel)] = "year">
+
+        <mat-form-field appearance="fill" class="field">
+            <mat-select [(value)]="selected" class="select">
+              <mat-option  class="option" *ngFor="let option of eConditions | keyvalue" [value]="option.value">
+                {{option.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    <div class="footer">
+      <button id="retour" mat-button >Retour</button>
+      <button id="valider" mat-button (click)="valider()">Valider</button>
+    </div>
+</div>
